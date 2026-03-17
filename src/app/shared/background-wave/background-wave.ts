@@ -3,10 +3,15 @@ import {
   AfterViewInit,
   ViewChild,
   ElementRef,
-  Inject,
-  PLATFORM_ID
+  PLATFORM_ID,
+  inject,
+  signal,
+  effect,
+  Injector,
+  runInInjectionContext
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { ThemeService } from '../../services/theme-service';
 
 @Component({
   selector: 'app-background-wave',
@@ -19,7 +24,26 @@ export class BackgroundWave {
 
   @ViewChild('canvas') canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  private platformId = inject(PLATFORM_ID);
+
+  private themeService = inject(ThemeService);
+
+  bgColor = signal<string>('');
+
+  neonColor = signal<string>('');
+
+  private readonly themeEffect = runInInjectionContext(inject(Injector), () =>
+    effect(() => {
+      if (!isPlatformBrowser(this.platformId)) return;
+
+      const theme = this.themeService.currentTheme();
+      const bgVar = theme === 'dark' ? '--bg-color' : '--color-test';
+      const neonVar = theme === 'dark' ? '--neon-green' : '--dim-green';
+
+      this.bgColor.set(getComputedStyle(document.documentElement).getPropertyValue(bgVar));
+      this.neonColor.set(getComputedStyle(document.documentElement).getPropertyValue(neonVar));
+    })
+  );
 
   ngAfterViewInit() {
     if (!isPlatformBrowser(this.platformId)) return;
@@ -42,16 +66,10 @@ export class BackgroundWave {
     const waveHeight = 28;
     let time = 0;
 
-    const bg = getComputedStyle(document.documentElement)
-      .getPropertyValue('--bg-color');
-
-    const color = getComputedStyle(document.documentElement)
-      .getPropertyValue('--neon-green');
-
-    const horizon = canvas.height * 0.55; // hasta donde llegan las olas
+    const horizon = canvas.height * 0.35; // hasta donde llegan las olas
 
     const animate = () => {
-      ctx.fillStyle = bg;
+      ctx.fillStyle = this.bgColor();
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       for (let z = 0; z < rows; z++) {
@@ -74,8 +92,8 @@ export class BackgroundWave {
           ctx.globalAlpha = Math.min(fade, 1);
 
           ctx.beginPath();
-          ctx.arc(px, py, 1.1 * scale, 0, Math.PI * 2);
-          ctx.fillStyle = color;
+          ctx.arc(px, py, 1.5 * scale, 0, Math.PI * 2);
+          ctx.fillStyle = this.neonColor();
           ctx.fill();
         }
       }
