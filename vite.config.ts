@@ -13,7 +13,8 @@ export default defineConfig({
       'primeng/button',
       'primeng/card',
       'primeng/inputtext',
-      '@primeuix/themes'
+      '@primeuix/themes',
+      'lucide-angular'
     ]
   },
   server: {
