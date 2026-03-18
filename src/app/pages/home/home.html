@@ -6,18 +6,12 @@
       <!-- Lado izquierdo: imagen grande y título debajo -->
       <div class="w-full lg:w-1/2 flex flex-col items-center">
         <img src="/foto.png" alt="Foto" class="w-72 h-72 lg:w-96 lg:h-96 object-cover rounded-lg shadow-lg" />
-        <h2 class="mt-4 text-2xl lg:text-3xl font-bold">Salvador Fernández</h2>
+        <h2 class="mt-4 text-2xl lg:text-3xl font-bold">{{ t('home.title') }}</h2>
       </div>
 
       <!-- Lado derecho: descripción -->
       <div class="w-full lg:w-1/2 max-w-2xl mx-auto lg:max-w-none lg:mx-0">
-        <p class="text-lg lg:text-xl leading-relaxed text-center">I am a Full-Stack Developer with strong experience building modern
-          web applications, specialized in Angular for the frontend and backed by solid knowledge of SQL and Java on the
-          backend. <br><br>
-
-          I focus on creating scalable, maintainable, and well-structured solutions, combining clean architecture with
-          efficient data management. I enjoy working on projects where technology solves real-world problems and
-          delivers tangible value.</p>
+        <p class="text-lg lg:text-xl leading-relaxed text-center" [innerHTML]="t('home.description')"></p>
       </div>
     </div>
   </div>

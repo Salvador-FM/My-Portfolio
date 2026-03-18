@@ -7,9 +7,12 @@
       </a>
 
       <!-- Dark Mode Toggle (Mobile only) -->
-      <div class="md:hidden ml-auto mr-2">
-        <p-button size="small" class="p-0" (click)="toggleMode()">
+      <div class="md:hidden ml-auto mr-2 flex gap-1">
+        <p-button width="40" height="40" class="p-0" (click)="toggleMode()">
           <lucide-angular [img]="SunMoonIcon" color="green" class="my-icon"></lucide-angular>
+        </p-button>
+        <p-button width="40" height="40" class="p-0" (click)="toggleLanguage()">
+          {{ currentLang() }}
         </p-button>
       </div>
 
@@ -26,13 +29,16 @@
 
       <!-- Navigation Links -->
       <ul class="hidden md:flex list-none gap-8 m-0 p-0 items-center">
-        <li><a href="" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">Perfil</a></li>
-        <li><a href="/skills" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">Skills</a></li>
-        <li><a href="/projects" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">Proyectos</a></li>
-        <li><a href="/contact" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">Contacto</a></li>
-        <li class="flex items-center ml-4">
+        <li><a href="" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.profile') }}</a></li>
+        <li><a href="/skills" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.skills') }}</a></li>
+        <li><a href="/projects" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.projects') }}</a></li>
+        <li><a href="/contact" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.contact') }}</a></li>
+        <li class="flex items-center ml-4 gap-2">
           <p-button class="p-0 scale-85" (click)="toggleMode()">
             <lucide-angular [img]="SunMoonIcon" color="green" class="my-icon"></lucide-angular>
+          </p-button>
+          <p-button class="p-0 scale-85 bg-transparent border-0 text-green-600 hover:text-neon-green" (click)="toggleLanguage()">
+            {{ currentLang() }}
           </p-button>
         </li>
       </ul>
@@ -45,10 +51,10 @@
       [class.scale-y-100]="isMenuOpen()"
       style="transform-origin: top;">
       <ul class="list-none flex flex-col m-0 p-0">
-        <li class="border-b border-green-500"><a href="" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">Perfil</a></li>
-        <li class="border-b border-green-500"><a href="/skills" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">Skills</a></li>
-        <li class="border-b border-green-500"><a href="/projects" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">Proyectos</a></li>
-        <li class="border-b border-green-500"><a href="/contact" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">Contacto</a></li>
+        <li class="border-b border-green-500"><a href="" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.profile') }}</a></li>
+        <li class="border-b border-green-500"><a href="/skills" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.skills') }}</a></li>
+        <li class="border-b border-green-500"><a href="/projects" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.projects') }}</a></li>
+        <li class="border-b border-green-500"><a href="/contact" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.contact') }}</a></li>
       </ul>
     </div>
   </div>

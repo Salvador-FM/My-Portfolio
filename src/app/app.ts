@@ -1,6 +1,7 @@
 import { Component, signal, OnInit, inject } from '@angular/core';
 import { ThemeService } from './services/theme-service';
 import { RouterOutlet } from '@angular/router';
+import { LanguageService } from './services/language-service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
+
   protected readonly title = signal('my-page');
+  private langService = inject(LanguageService);
   private themeService = inject(ThemeService);
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.langService.init();
     this.themeService.initTheme();
   }
 }

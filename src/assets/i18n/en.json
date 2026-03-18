@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "profile": "Profile",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Salvador Fernández",
+    "description": "I am a Full-Stack Developer with strong experience building modern web applications, specialized in Angular for the frontend and backed by solid knowledge of SQL and Java on the backend. <br><br> I focus on creating scalable, maintainable, and well-structured solutions, combining clean architecture with efficient data management. I enjoy working on projects where technology solves real-world problems and delivers tangible value."
+  }
+}

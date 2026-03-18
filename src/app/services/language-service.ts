@@ -1,53 +1,69 @@
-// import { Injectable, inject, signal } from '@angular/core';
-// import { WindowService } from './window-service';
+// import { Injectable, inject } from '@angular/core';
+// import { TranslationService, Lang } from './translation-service';
 // import { LocalStorageService } from './local-storage-service';
-// import { TranslateService } from '@ngx-translate/core';
-// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-// import { HttpClient } from '@angular/common/http';
-
-// export type Language = 'en' | 'es';
 
 // @Injectable({
 //   providedIn: 'root'
 // })
 // export class LanguageService {
 
-//   private windowService = inject(WindowService);
+//   private translation = inject(TranslationService);
 //   private storage = inject(LocalStorageService);
-//   private translate = inject(TranslateService);
-//   private http = inject(HttpClient);
 
-//   currentLanguage = signal<Language>('en');
+//   async init() {
+//     let lang = this.storage.getItem('lang') as Lang;
 
-//   initLanguage(): Language {
-//     let lang = this.storage.getItem('language') as Language | null;
 //     if (!lang) {
-//       lang = this.getSystemLanguage();
+//       lang = this.getBrowserLang();
+//       this.storage.setItem('lang', lang);
 //     }
 
-//     this.currentLanguage.set(lang);
-//     this.translate.setDefaultLang(lang);
-//     this.translate.use(lang);
-//     return lang;
+//     await this.translation.loadLang(lang);
 //   }
 
-//   setLanguage(lang: Language) {
-//     this.storage.setItem('language', lang);
-//     this.currentLanguage.set(lang);
-//     this.translate.use(lang);
+//   async setLang(lang: Lang) {
+//     this.storage.setItem('lang', lang);
+//     await this.translation.loadLang(lang);
 //   }
 
-//   toggleLanguage() {
-//     const next = this.currentLanguage() === 'es' ? 'en' : 'es';
-//     this.setLanguage(next);
+//   private getBrowserLang(): Lang {
+//     const browserLang = navigator.language.split('-')[0];
+//     return browserLang === 'es' ? 'es' : 'en';
 //   }
 
-//   private getSystemLanguage(): Language {
-//     const win = this.windowService.window;
-
-//     if (!win) return 'en';
-
-//     const userLang = win.navigator.language || 'en';
-//     return userLang.startsWith('es') ? 'es' : 'en';
-//   }
 // }
+
+import { Injectable, inject } from '@angular/core';
+import { TranslationService, Lang } from './translation-service';
+import { LocalStorageService } from './local-storage-service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LanguageService {
+
+  private translation = inject(TranslationService);
+  private storage = inject(LocalStorageService);
+
+  async init() {
+    let lang = this.storage.getItem('lang') as Lang;
+
+    if (!lang) {
+      lang = this.getBrowserLang();
+      this.storage.setItem('lang', lang);
+    }
+
+    await this.translation.loadLang(lang);
+  }
+
+  async setLang(lang: Lang) {
+    this.storage.setItem('lang', lang);
+    await this.translation.loadLang(lang);
+  }
+
+  private getBrowserLang(): Lang {
+    const browserLang = navigator.language.split('-')[0];
+    return browserLang === 'es' ? 'es' : 'en';
+  }
+
+}

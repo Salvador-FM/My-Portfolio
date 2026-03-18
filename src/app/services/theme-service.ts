@@ -59,6 +59,8 @@ export class ThemeService {
       html.classList.remove('dark');
     }
 
+    this.storage.setItem('theme', theme); // Persistimos la elección
+
     // Opcional: Mantener el atributo si quieres usarlo para otros estilos CSS puros
     html.setAttribute('data-theme', theme);
   }

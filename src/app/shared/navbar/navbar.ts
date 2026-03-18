@@ -1,8 +1,10 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy, inject } from '@angular/core';
 import { ThemeService } from '../../services/theme-service';
 import { LucideAngularModule, SunMoonIcon } from 'lucide-angular';
 import { ButtonModule } from 'primeng/button';
+import { LanguageService } from '../../services/language-service';
+import { TranslationService } from '../../services/translation-service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,13 +18,22 @@ export class Navbar {
 
   readonly SunMoonIcon = SunMoonIcon;
 
+  private langService = inject(LanguageService);
+  private translation = inject(TranslationService);
+
+  t = (key: string) => this.translation.t(key);
+
   isMenuOpen = signal(false);
   isDarkMode = signal<boolean>(false);
+  currentLang = signal<string>('ES');
 
   constructor(private themeService: ThemeService) {
     // initialise theme via service (handles storage & application)
     const initial = this.themeService.initTheme();
     this.isDarkMode.set(initial === 'dark');
+    // set initial language
+    const lang = this.translation.lang;
+    this.currentLang.set(lang.toUpperCase());
   }
 
   toggleMenu() {
@@ -34,5 +45,11 @@ export class Navbar {
     this.themeService.toggleTheme();
     // keep the signal in sync for UI binding
     this.isDarkMode.update(mode => !mode);
+  }
+
+  toggleLanguage() {
+    const next = this.translation.lang === 'es' ? 'en' : 'es';
+    this.langService.setLang(next);
+    this.currentLang.set(next.toUpperCase());
   }
 }
