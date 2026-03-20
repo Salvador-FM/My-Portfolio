@@ -10,9 +10,7 @@ export default defineConfig({
       '@angular/common',
       '@angular/platform-browser',
       '@angular/platform-browser-dynamic',
-      'primeng/button',
-      'primeng/card',
-      'primeng/inputtext',
+      'primeng',
       '@primeuix/themes',
       'lucide-angular'
     ]

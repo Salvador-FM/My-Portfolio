@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { BackgroundWave } from '../../shared/background-wave/background-wave';
 import { TranslationService } from '../../services/translation-service';
+import { FieldsetModule } from 'primeng/fieldset';
 
 @Component({
   selector: 'app-home',
   imports: [
-    BackgroundWave
+    BackgroundWave,
+    FieldsetModule
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',
