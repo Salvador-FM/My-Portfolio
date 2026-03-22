@@ -2,7 +2,8 @@
 
 <div class=" flex items-center justify-center px-4 py-12">
   <div class="max-w-6xl w-full">
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-8 text-black dark:text-white text-center lg:text-left">
+    <div
+      class="flex flex-col lg:flex-row items-center justify-center gap-8 text-black dark:text-white text-center lg:text-left">
       <!-- Lado izquierdo: imagen grande y título debajo -->
       <div class="w-full lg:w-1/2 flex flex-col items-center">
         <img src="/foto.png" alt="Foto" class="w-62 h-62 lg:w-76 lg:h-76 object-cover rounded-lg shadow-lg" />
@@ -17,14 +18,122 @@
   </div>
 </div>
 
-<div class=" flex items-center justify-center mx-4 my-12">
-  <div class="max-w-6xl w-full bg-white-400 dark:bg-gray-base rounded-lg shadow-lg p-6">
-    <h3 class="text-xl lg:text-2xl font-semibold mb-4 text-center">Tecnologies</h3>
-    <p-fieldset legend="Header">
-      <p class="m-0">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </p-fieldset>
+<div class="flex items-center justify-center mx-4 my-12">
+  <div class="max-w-6xl w-full bg-white-400 dark:bg-gray-base rounded-lg shadow-lg p-6 md:p-8">
+
+    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center">Tecnologías</h3>
+
+    <!-- Frontend -->
+    <h5 class="text-xl font-semibold mb-4 text-center">Frontend</h5>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 mb-10">
+      
+      <!-- Tarjetas -->
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Angular logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Angular-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Angular</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="React.js logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/React-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">React</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Vue JS logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Vue-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Vue</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Next.js logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Nextjs-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Next.js</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Astro logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Astro-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Astro</span>
+      </div>
+
+    </div>
+
+    <!-- Backend -->
+    <h5 class="text-xl font-semibold mb-4 text-center">Backend</h5>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 mb-10">
+
+      <!-- Tarjetas -->
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Node.js logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Nodejs-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Node.js</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Express.js logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Expressjs-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Express.js</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Spring Boot logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Spring-boot-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Spring Boot</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="Laravel logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Laravel-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">Laravel</span>
+      </div>
+
+      <!-- Agrega más si quieres -->
+    </div>
+
+    <!-- Databases -->
+    <h5 class="text-xl font-semibold mb-4 text-center">Bases de datos</h5>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="MySQL logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Mysql-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">MySQL</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="PostgreSQL logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Postgresql-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">PostgreSQL</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="MongoDB logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Mongodb-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">MongoDB</span>
+      </div>
+
+      <div class="group relative flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <img alt="SQLite logo"
+          class="w-16 h-16 md:w-20 md:h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+          src="/Sqlite-icon.png" />
+        <span class="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">SQLite</span>
+      </div>
+
+    </div>
+
   </div>
 </div>
