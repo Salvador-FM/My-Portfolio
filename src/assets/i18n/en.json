@@ -7,6 +7,14 @@
   },
   "home": {
     "title": "Salvador Fernández",
-    "description": "I am a Full-Stack Developer with strong experience building modern web applications, specialized in Angular for the frontend and backed by solid knowledge of SQL and Java on the backend. <br><br> I focus on creating scalable, maintainable, and well-structured solutions, combining clean architecture with efficient data management. I enjoy working on projects where technology solves real-world problems and delivers tangible value."
+    "description": "I am a Full-Stack Developer with strong experience building modern web applications, specialized in Angular for the frontend and backed by solid knowledge of SQL and Java on the backend. <br><br> I focus on creating scalable, maintainable, and well-structured solutions, combining clean architecture with efficient data management. I enjoy working on projects where technology solves real-world problems and delivers tangible value.",
+    "skills": {
+      "title": "Skills",
+      "description": "I have experience in a wide range of technologies and tools, including Angular, Java, SQL, HTML, CSS, JavaScript, TypeScript, Git, Docker, and more. I strive to stay updated with the latest trends and best practices in web development to deliver high-quality solutions."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "I have worked on various projects ranging from enterprise web applications to personal projects. Some of my notable projects include a task management platform, an online booking system, and a habit tracking application. Each project has allowed me to apply my technical skills and learn new technologies."
+    }
   }
 }
