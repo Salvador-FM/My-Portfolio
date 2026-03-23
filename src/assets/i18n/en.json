@@ -14,7 +14,29 @@
     },
     "projects": {
       "title": "Projects",
-      "description": "I have worked on various projects ranging from enterprise web applications to personal projects. Some of my notable projects include a task management platform, an online booking system, and a habit tracking application. Each project has allowed me to apply my technical skills and learn new technologies."
+      "description": "I have worked on various projects ranging from enterprise web applications to personal projects. Some of my notable projects include a task management platform, an online booking system, and a habit tracking application. Each project has allowed me to apply my technical skills and learn new technologies.",
+      "project1": {
+        "title": "Inventory Management System v2",
+        "description": "New version with Angular 18, signals, updated PrimeNG, NestJS backend, and AI support for stock predictions. Currently in active development."
+      },
+      "project2": {
+        "title": "Analytics Dashboard with AI",
+        "description": "Real-time data visualization + integration with machine learning models for forecasting."
+      },
+      "project3": {
+        "title": "Habit Tracking Application",
+        "description": "A mobile application to help users establish and maintain healthy habits, with personalized reminders and progress analysis."
+      },
+      "status": {
+        "inDevelopment": "In development",
+        "comingSoon": "Coming soon"
+      },
+      "options": {
+        "viewCode": "View code",
+        "videoDemo": "Video demo",
+        "demoSoon": "Demo coming soon",
+        "workInProgress": "Work in progress"
+      }
     }
   }
 }

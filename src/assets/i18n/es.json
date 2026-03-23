@@ -14,7 +14,29 @@
     },
     "projects": {
       "title": "Proyectos",
-      "description": "He trabajado en diversos proyectos que van desde aplicaciones web empresariales hasta proyectos personales. Algunos de mis proyectos destacados incluyen una plataforma de gestión de tareas, un sistema de reservas en línea y una aplicación de seguimiento de hábitos. Cada proyecto me ha permitido aplicar mis habilidades técnicas y aprender nuevas tecnologías."
+      "description": "He trabajado en diversos proyectos que van desde aplicaciones web empresariales hasta proyectos personales. Algunos de mis proyectos destacados incluyen una plataforma de gestión de tareas, un sistema de reservas en línea y una aplicación de seguimiento de hábitos. Cada proyecto me ha permitido aplicar mis habilidades técnicas y aprender nuevas tecnologías.",
+      "project1": {
+        "title": "Sistema de Gestión de Inventarios v2",
+        "description": "Nueva versión con Angular 18, signals, PrimeNG actualizado, backend en NestJS y soporte para IA en predicciones de stock. Actualmente en desarrollo activo."
+      },
+      "project2": {
+        "title": "Dashboard Analítico con IA",
+        "description": "Visualización de datos en tiempo real + integración con modelos de machine learning para forecasting."
+      },
+      "project3": {
+        "title": "Aplicación de Seguimiento de Hábitos",
+        "description": "Una aplicación móvil para ayudar a los usuarios a establecer y mantener hábitos saludables, con recordatorios personalizados y análisis de progreso."
+      },
+      "status": {
+        "inDevelopment": "En desarrollo",
+        "comingSoon": "Próximamente"
+      },
+      "options": {
+        "viewCode": "Ver código",
+        "videoDemo": "Video demo",
+        "demoSoon": "Demo próximamente",
+        "workInProgress": "En proceso"
+      }
     }
   }
 }
