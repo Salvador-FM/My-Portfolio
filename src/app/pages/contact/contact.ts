@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../../../../environment/environment';
 
 @Component({
   selector: 'app-contact',
@@ -21,23 +23,46 @@ export class Contact {
   };
 
   isSubmitting = false;
+  successMessage = '';
+  errorMessage = '';
 
-  onSubmit() {
-    if (!this.formData.name || !this.formData.email || !this.formData.message) return;
+  constructor() {
+    // Inicializamos EmailJS con la clave del environment
+    emailjs.init({
+      publicKey: environment.emailjs.publicKey,
+    });
+  }
+
+  async onSubmit(e: Event) {
+    e.preventDefault();
+
+    if (this.isSubmitting) return;
 
     this.isSubmitting = true;
+    this.successMessage = '';
+    this.errorMessage = '';
 
-    // Aquí iría la lógica real de envío (EmailJS, Formspree, backend propio, etc.)
-    console.log('Formulario enviado:', this.formData);
+    try {
+      const response: EmailJSResponseStatus = await emailjs.sendForm(
+        environment.emailjs.serviceId,
+        environment.emailjs.templateId,
+        e.target as HTMLFormElement
+      );
 
-    // Simulación de envío
-    setTimeout(() => {
-      alert('¡Mensaje enviado correctamente! Gracias por contactarme. 😊');
+      console.log('SUCCESS!', response.status, response.text);
       
+      this.successMessage = '¡Mensaje enviado correctamente! Gracias por contactarme. 😊';
+
       // Resetear formulario
       this.formData = { name: '', email: '', subject: '', message: '' };
+      (e.target as HTMLFormElement).reset();
+
+    } catch (error: any) {
+      console.error('FAILED...', error);
+      this.errorMessage = 'Hubo un error al enviar el mensaje. Por favor intenta más tarde.';
+    } finally {
       this.isSubmitting = false;
-    }, 1800);
+    }
   }
 
 }

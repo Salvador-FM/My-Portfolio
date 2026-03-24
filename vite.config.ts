@@ -13,7 +13,8 @@ export default defineConfig({
       '@angular/platform-browser-dynamic',
       'primeng',
       '@primeuix/themes',
-      'lucide-angular'
+      'lucide-angular',
+      '@emailjs/browser'
     ]
   },
   server: {
