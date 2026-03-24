@@ -1,0 +1,88 @@
+<div class="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4 bg-neutral-50 dark:bg-gray-base">
+    <div class="max-w-2xl w-full">
+
+        <!-- Título de sección -->
+        <div class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-3">
+                Contáctame
+            </h1>
+            <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-md mx-auto">
+                ¿Tienes un proyecto en mente o quieres colaborar? Estoy disponible para charlar.
+            </p>
+        </div>
+
+        <!-- Card principal -->
+        <div
+            class="bg-white dark:bg-neutral-800 rounded-2xl shadow-xl overflow-hidden border border-neutral-200 dark:border-neutral-700">
+
+            <div class="p-8 md:p-10">
+                <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-6">
+
+                    <!-- Nombre -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                            Nombre completo
+                        </label>
+                        <input type="text" id="name" name="name" [(ngModel)]="formData.name" #name="ngModel" required
+                            class="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                            placeholder="Juan Pérez">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                            Correo electrónico
+                        </label>
+                        <input type="email" id="email" name="email" [(ngModel)]="formData.email" #email="ngModel"
+                            required email
+                            class="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                            placeholder="tu@email.com">
+                    </div>
+
+                    <!-- Asunto -->
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                            Asunto
+                        </label>
+                        <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" #subject="ngModel"
+                            required
+                            class="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                            placeholder="Propuesta de proyecto">
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                            Mensaje
+                        </label>
+                        <textarea id="message" name="message" [(ngModel)]="formData.message" #message="ngModel" required
+                            rows="6"
+                            class="w-full px-4 py-3 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-y min-h-35"
+                            placeholder="Cuéntame un poco más sobre tu idea..."></textarea>
+                    </div>
+
+                    <!-- Botón de enviar -->
+                    <button type="submit" [disabled]="contactForm.invalid || isSubmitting"
+                        class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-neutral-400 text-white font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-indigo-500/30">
+
+                        @if (isSubmitting) {
+                        <span
+                            class="animate-spin inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full"></span>
+                        }
+                        {{ isSubmitting ? 'Enviando mensaje...' : 'Enviar mensaje' }}
+                    </button>
+                </form>
+            </div>
+
+            <!-- Footer de la card -->
+            <div
+                class="bg-neutral-50 dark:bg-neutral-900 px-8 py-5 border-t border-neutral-200 dark:border-neutral-700 text-center text-sm text-neutral-500 dark:text-neutral-400">
+                O escríbeme directamente a
+                <a href="mailto:tu@email.com" class="text-green-600 dark:text-green-600 hover:underline font-medium">
+                    tu@email.com
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

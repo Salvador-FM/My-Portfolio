@@ -8,6 +8,7 @@ export default defineConfig({
     include: [
       '@angular/core',
       '@angular/common',
+      '@angular/forms',
       '@angular/platform-browser',
       '@angular/platform-browser-dynamic',
       'primeng',
