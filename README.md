@@ -1,59 +1,187 @@
-# MyPage
+# 🚀 My Portfolio Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+Welcome to my personal portfolio!
+This project showcases my skills, projects, and experience as a **Full-Stack Developer**, built with modern technologies and a focus on performance, scalability, and user experience.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🌐 Live Preview
+
+> *(Add your deployed link here)*
+> 🔗 https://your-portfolio-url.com
+
+---
+
+## ✨ Features
+
+* 🌙 **Dark / Light Mode Toggle**
+* 🌎 **Multilanguage Support (ES / EN)**
+* ⚡ **Server-Side Rendering (SSR)**
+* 📱 **Responsive Design**
+* 🎯 **Smooth Scroll Navigation**
+* 🧠 **Modern State Management with Signals**
+* 🎨 **Custom UI with Tailwind + PrimeNG**
+* 📬 **Contact Form (ready for backend/email integration)**
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Angular (latest version)
+* TypeScript
+* Tailwind CSS
+* PrimeNG
+* Lucide Icons
+
+### Backend / SSR
+
+* Angular SSR
+* Node.js (for server rendering)
+
+### Architecture
+
+* Standalone Components
+* Signals-based state management
+* Modular services:
+
+  * ThemeService
+  * TranslationService
+  * LocalStorageService
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── app/
+ │   ├── components/
+ │   │   ├── navbar/
+ │   │   ├── footer/
+ │   │   ├── contact/
+ │   │
+ │   ├── services/
+ │   │   ├── theme.service.ts
+ │   │   ├── translation.service.ts
+ │   │   ├── language.service.ts
+ │   │   ├── local-storage.service.ts
+ │   │
+ │   ├── layouts/
+ │   │   ├── main-layout/
+ │   │
+ │   ├── pages/
+ │       ├── home/
+ │       ├── contact/
+ │
+ ├── assets/
+ │   ├── i18n/
+ │       ├── en.json
+ │       ├── es.json
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
+
+Install dependencies:
+
+```bash
+pnpm install
+```
+
+Run development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧪 Run with SSR
 
 ```bash
-ng generate component component-name
+npm run build
+npm run serve:ssr:my-page
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## 🌍 Internationalization
+
+This project uses a **custom translation system** with JSON files:
+
+```
+/assets/i18n/
+  en.json
+  es.json
 ```
 
-## Building
+Switch language dynamically via UI.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🎨 Theming
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* Uses CSS variables
+* Controlled via `ThemeService`
+* Persisted in `localStorage`
+* Detects system preference (`prefers-color-scheme`)
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 📬 Contact
 
-```bash
-ng test
-```
+The contact form is ready to integrate with:
 
-## Running end-to-end tests
+* EmailJS
+* Formspree
+* Custom backend (recommended)
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## 🚧 Future Improvements
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+* 🔥 SEO with localized routes (`/en`, `/es`)
+* 🧠 Active section highlighting (scroll spy)
+* 📊 Analytics integration
+* 🛡️ Form validation + spam protection
+* ⚡ Performance optimizations
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👨‍💻 Author
+
+**Salvador Fernández Martínez**
+
+* 💼 Full-Stack Developer
+* 🌱 Always learning and building
+* 🚀 Focused on scalable and modern web apps
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+* ⭐ Star the repo
+* 🧑‍💻 Fork it
+* 📢 Share it
+
+---
+
+## 📜 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+> Built with passion, curiosity, and a lot of ☕
