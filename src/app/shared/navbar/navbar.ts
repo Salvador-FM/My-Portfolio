@@ -5,10 +5,11 @@ import { LucideAngularModule, SunMoonIcon } from 'lucide-angular';
 import { ButtonModule } from 'primeng/button';
 import { LanguageService } from '../../services/language-service';
 import { TranslationService } from '../../services/translation-service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
-  imports: [NgOptimizedImage, LucideAngularModule, ButtonModule],
+  imports: [NgOptimizedImage, LucideAngularModule, ButtonModule, RouterLink],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -21,19 +22,21 @@ export class Navbar {
   private langService = inject(LanguageService);
   private translation = inject(TranslationService);
 
-  t = (key: string) => this.translation.t(key);
+  t = (key: string) => {
+    return this.translation.t(key) || '';
+  };
 
   isMenuOpen = signal(false);
   isDarkMode = signal<boolean>(false);
-  currentLang = signal<string>('ES');
+  nextLang = () => this.translation.lang === 'es' ? 'EN' : 'ES';
 
   constructor(private themeService: ThemeService) {
     // initialise theme via service (handles storage & application)
     const initial = this.themeService.initTheme();
     this.isDarkMode.set(initial === 'dark');
     // set initial language
-    const lang = this.translation.lang;
-    this.currentLang.set(lang.toUpperCase());
+    // const lang = this.translation.lang;
+    // this.currentLang.set(lang.toUpperCase());
   }
 
   toggleMenu() {
@@ -50,6 +53,6 @@ export class Navbar {
   toggleLanguage() {
     const next = this.translation.lang === 'es' ? 'en' : 'es';
     this.langService.setLang(next);
-    this.currentLang.set(next.toUpperCase());
+    // this.currentLang.set(next.toUpperCase());
   }
 }

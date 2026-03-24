@@ -25,7 +25,8 @@ export class TranslationService {
   }
 
   t(path: string): string {
-    return path.split('.').reduce((obj, key) => obj?.[key], this.translations()) || path;
+    const translations = this.translations();
+    return path.split('.').reduce((obj, key) => obj?.[key], translations) || path;
   }
 
   get lang() {
