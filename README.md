@@ -7,7 +7,6 @@ This project showcases my skills, projects, and experience as a **Full-Stack Dev
 
 ## 🌐 Live Preview
 
-> *(Add your deployed link here)*
 > 🔗 https://your-portfolio-url.com
 
 ---
