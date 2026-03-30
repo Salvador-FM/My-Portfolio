@@ -33,7 +33,7 @@
                 'border-red-500 focus:ring-red-500': name.invalid && name.touched,
                 'border-neutral-300 dark:border-neutral-600 focus:ring-green-500': !(name.invalid && name.touched)
               }"
-              placeholder="{{ t('contact.form.nameProperties.placeholder') }}">
+              placeholder="{{ t('contact.form.nameProperties.namePlaceholder') }}">
 
             <p *ngIf="name.invalid && name.touched" class="mt-1 text-sm text-red-500">
               {{ name.errors?.['required'] ? t('contact.form.nameProperties.required') : '' }}
