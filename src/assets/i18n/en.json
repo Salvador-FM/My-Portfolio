@@ -16,7 +16,7 @@
       "title": "Projects",
       "description": "I have worked on various projects ranging from enterprise web applications to personal projects. Some of my notable projects include a task management platform, an online booking system, and a habit tracking application. Each project has allowed me to apply my technical skills and learn new technologies.",
       "project1": {
-        "title": "Inventory Management System v2",
+        "title": "Inventory Management System",
         "description": "New version with Angular 18, signals, updated PrimeNG, NestJS backend, and AI support for stock predictions. Currently in active development."
       },
       "project2": {
@@ -36,6 +36,42 @@
         "videoDemo": "Video demo",
         "demoSoon": "Demo coming soon",
         "workInProgress": "Work in progress"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Do you have a project in mind? I'm ready to listen.",
+    "form": {
+      "nameProperties": {
+        "name": "Name",
+        "namePlaceholder": "Your full name",
+        "required": "Name is required",
+        "minLength": "Name must be at least 3 characters long"
+      },
+      "emailProperties": {
+        "email": "Email",
+        "emailPlaceholder": "Your email address",
+        "required": "Email is required",
+        "invalid": "Email is not valid"
+      },
+      "subjectProperties": {
+        "subject": "Subject",
+        "subjectPlaceholder": "Subject of the message",
+        "required": "Subject is required"
+      },
+      "messageProperties": {
+        "message": "Message",
+        "messagePlaceholder": "Your message",
+        "required": "Message is required",
+        "minLength": "Message must be at least 10 characters long"
+      },
+      "send": "Send message",
+      "sending": "Sending...",
+      "footerForm": "Or send me a direct message at",
+      "alert": {
+        "success": "Message sent successfully! Thank you for contacting me. 😊",
+        "error": "There was an error sending the message. Please try again later."
       }
     }
   }

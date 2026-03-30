@@ -16,7 +16,7 @@
       "title": "Proyectos",
       "description": "He trabajado en diversos proyectos que van desde aplicaciones web empresariales hasta proyectos personales. Algunos de mis proyectos destacados incluyen una plataforma de gestión de tareas, un sistema de reservas en línea y una aplicación de seguimiento de hábitos. Cada proyecto me ha permitido aplicar mis habilidades técnicas y aprender nuevas tecnologías.",
       "project1": {
-        "title": "Sistema de Gestión de Inventarios v2",
+        "title": "Sistema de Gestión de Inventarios",
         "description": "Nueva versión con Angular 18, signals, PrimeNG actualizado, backend en NestJS y soporte para IA en predicciones de stock. Actualmente en desarrollo activo."
       },
       "project2": {
@@ -36,6 +36,42 @@
         "videoDemo": "Video demo",
         "demoSoon": "Demo próximamente",
         "workInProgress": "En proceso"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "description": "¿Tienes un proyecto en mente? Estoy listo para escucharte.",
+    "form": {
+      "nameProperties": {
+        "name": "Nombre",
+        "namePlaceholder": "Tu nombre completo",
+        "required": "El nombre es obligatorio",
+        "minLength": "El nombre debe tener al menos 3 caracteres"
+      },
+      "emailProperties": {
+        "email": "Correo electrónico",
+        "emailPlaceholder": "Tu correo electrónico",
+        "required": "El correo electrónico es obligatorio",
+        "invalid": "El correo electrónico no es válido"
+      },
+      "subjectProperties": {
+        "subject": "Asunto",
+        "subjectPlaceholder": "Asunto del mensaje",
+        "required": "El asunto es obligatorio"
+      },
+      "messageProperties": {
+        "message": "Mensaje",
+        "messagePlaceholder": "Escribe tu mensaje aquí",
+        "required": "El mensaje es obligatorio",
+        "minLength": "El mensaje debe tener al menos 10 caracteres"
+      },
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "footerForm":"O escríbeme directamente a",
+      "alert": {
+        "success": "¡Mensaje enviado correctamente! Gracias por contactarme. 😊",
+        "error": "Hubo un error al enviar el mensaje. Por favor intenta más tarde."
       }
     }
   }

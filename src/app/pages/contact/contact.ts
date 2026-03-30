@@ -1,7 +1,8 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { environment } from '../../../../environment/environment';
+import { TranslationService } from '../../services/translation-service';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,12 @@ import { environment } from '../../../../environment/environment';
   styleUrl: './contact.css',
 })
 export class Contact {
+
+  private translation = inject(TranslationService);
+
+  t = (key: string) => {
+    return this.translation.t(key) || '';
+  };
 
   formData = {
     name: '',
@@ -61,7 +68,7 @@ export class Contact {
 
       console.log('EmailJS SUCCESS!', response.status, response.text);
 
-      this.successMessage = '¡Mensaje enviado correctamente! Gracias por contactarme. 😊';
+      this.successMessage = this.t('contact.form.alert.success');
 
       // Resetear formulario
       this.formData = { name: '', email: '', subject: '', message: '' };
@@ -69,7 +76,7 @@ export class Contact {
 
     } catch (error: any) {
       console.error('EmailJS FAILED...', error);
-      this.errorMessage = 'Hubo un error al enviar el mensaje. Por favor intenta más tarde.';
+      this.errorMessage = this.t('contact.form.alert.error');
     } finally {
       this.isSubmitting = false;
     }

@@ -181,48 +181,11 @@
         <div
           class="group relative overflow-hidden rounded-xl bg-white dark:bg-neutral-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-neutral-600">
           <!-- Imagen -->
-          <div class="aspect-4/3 overflow-hidden">
+          <!-- <div class="aspect-4/3 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop"
               alt="Proyecto 1"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-          </div>
-
-          <!-- Contenido -->
-          <div class="p-5 md:p-6">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
-              {{ t('home.projects.project1.title') }}
-            </h3>
-            <p class="text-sm md:text-base text-gray-800 dark:text-gray-300 line-clamp-3 mb-4">
-              {{ t('home.projects.project1.description') }}
-            </p>
-
-            <!-- Tech badges opcionales -->
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="px-2.5 py-1 text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 rounded-full">Angular</span>
-              <span
-                class="px-2.5 py-1 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full">Spring
-                Boot</span>
-              <span
-                class="px-2.5 py-1 text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded-full">PostgreSQL</span>
-            </div>
-
-            <!-- Botones / enlace -->
-            <div class="flex gap-3">
-              <a href="#"
-                class="inline-flex items-center text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300">
-                {{ t('home.projects.options.viewCode') }} →
-              </a>
-              <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
-                {{ t('home.projects.options.videoDemo') }}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 2 -->
-        <div
-          class="group relative overflow-hidden rounded-xl bg-white dark:bg-neutral-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-neutral-600">
+          </div> -->
 
           <!-- Imagen con overlay "En proceso" -->
           <div class="relative aspect-4/3 overflow-hidden">
@@ -246,6 +209,61 @@
           <!-- Contenido -->
           <div class="p-5 md:p-6">
             <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
+              {{ t('home.projects.project1.title') }}
+            </h3>
+            <p class="text-sm md:text-base text-gray-800 dark:text-gray-300 line-clamp-3 mb-4">
+              {{ t('home.projects.project1.description') }}
+            </p>
+
+            <!-- Tech badges opcionales -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-2.5 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 rounded-full">Next.js</span>
+              <span
+                class="px-2.5 py-1 text-xs font-medium bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200 rounded-full">Tailwind CSS</span>
+              <span
+                  class="px-2.5 py-1 text-xs font-medium bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 rounded-full">Prisma</span>
+              <span
+                class="px-2.5 py-1 text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full">MySQL</span>
+            </div>
+
+            <!-- Botones / enlace -->
+            <div class="flex gap-3">
+              <a href="https://github.com/Salvador-FM/inventario-app-front" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300">
+                {{ t('home.projects.options.viewCode') }}
+              </a>
+              <!-- <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                {{ t('home.projects.options.videoDemo') }} →
+              </a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div
+          class="group relative overflow-hidden rounded-xl bg-white dark:bg-neutral-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-neutral-600">
+
+          <!-- Imagen con overlay "En proceso" -->
+          <div class="relative aspect-4/3 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop"
+              alt="Dashboard en proceso"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-black/40 flex items-start justify-end p-3 pointer-events-none">
+              <span
+                class="px-4 py-1.5 bg-amber-500 text-amber-950 font-semibold text-sm md:text-base rounded-full shadow-md border-2 border-amber-600/70 uppercase tracking-wide flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {{ t('home.projects.status.comingSoon') }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Contenido -->
+          <div class="p-5 md:p-6">
+            <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
               {{ t('home.projects.project2.title') }}
             </h3>
             <p class="text-sm md:text-base text-neutral-800 dark:text-gray-300 line-clamp-3 mb-4">
@@ -257,7 +275,9 @@
               <span
                 class="px-2.5 py-1 text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 rounded-full">Angular</span>
               <span
-                class="px-2.5 py-1 text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200 rounded-full">NestJS</span>
+                class="px-2.5 py-1 text-xs font-medium bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200 rounded-full">Tailwind CSS</span>
+              <span
+                class="px-2.5 py-1 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full">Spring Boot</span>
               <span
                 class="px-2.5 py-1 text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded-full">PostgreSQL</span>
             </div>
@@ -272,6 +292,8 @@
         <!-- Proyecto 3 -->
         <div
           class="group relative overflow-hidden rounded-xl bg-white dark:bg-neutral-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-neutral-600">
+
+          <!-- Imagen con overlay "Próximamente" -->
           <div class="relative aspect-4/3 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop"
               alt="Dashboard en proceso"
