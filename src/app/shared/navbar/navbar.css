@@ -1,1 +1,31 @@
-/* Estilos personalizados del navbar si es necesario */
+.nav-link {
+  position: relative;
+  color: #16a34a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--neon-green);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--neon-green);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:focus {
+  outline: 2px solid var(--neon-green);
+  outline-offset: 2px;
+}

@@ -21,6 +21,29 @@ export class Home implements AfterViewInit {
     return this.translation.t(key) || '';
   };
 
+  frontendSkills = [
+    { name: 'Angular', icon: '/Angular-icon.png' },
+    { name: 'React', icon: '/React-icon.png' },
+    { name: 'Vue', icon: '/Vue-icon.png' },
+    { name: 'Next.js', icon: '/Nextjs-icon.png' },
+    { name: 'Astro', icon: '/Astro-icon.png' },
+  ];
+
+  backendSkills = [
+    { name: 'Node.js', icon: '/Nodejs-icon.png' },
+    { name: 'Express.js', icon: '/Expressjs-icon.png' },
+    { name: 'Spring Boot', icon: '/Spring-boot-icon.png' },
+    { name: 'Laravel', icon: '/Laravel-icon.png' },
+  ];
+
+  databaseSkills = [
+    { name: 'MySQL', icon: '/Mysql-icon.png' },
+    { name: 'PostgreSQL', icon: '/Postgresql-icon.png' },
+    { name: 'MongoDB', icon: '/Mongodb-icon.png' },
+    { name: 'SQLite', icon: '/Sqlite-icon.png' },
+    { name: 'Supabase', icon: '/Supabase-icon.png' },
+  ];
+
   constructor(private route: ActivatedRoute) {}
 
   ngAfterViewInit() {

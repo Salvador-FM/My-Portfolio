@@ -29,15 +29,15 @@
 
       <!-- Navigation Links -->
       <ul class="hidden md:flex list-none gap-8 m-0 p-0 items-center">
-        <li><a [routerLink]="['/']" fragment="profile" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.profile') }}</a></li>
-        <li><a [routerLink]="['/']" fragment="skills" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.skills') }}</a></li>
-        <li><a [routerLink]="['/']" fragment="projects" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.projects') }}</a></li>
-        <li><a [routerLink]="['/contact']" class="text-green-600 no-underline transition-colors hover:text-neon-green focus:outline-2 focus:outline-offset-2 focus:outline-neon-green">{{ t('navbar.contact') }}</a></li>
+        <li><a [routerLink]="['/']" fragment="profile" class="nav-link">{{ t('navbar.profile') }}</a></li>
+        <li><a [routerLink]="['/']" fragment="skills" class="nav-link">{{ t('navbar.skills') }}</a></li>
+        <li><a [routerLink]="['/']" fragment="projects" class="nav-link">{{ t('navbar.projects') }}</a></li>
+        <li><a [routerLink]="['/contact']" class="nav-link">{{ t('navbar.contact') }}</a></li>
         <li class="flex items-center ml-4 gap-2">
           <p-button class="p-0 scale-85" (click)="toggleMode()">
             <lucide-angular [img]="SunMoonIcon" color="green" class="my-icon"></lucide-angular>
           </p-button>
-          <p-button class="p-0 scale-85 bg-transparent border-0 text-green-600 hover:text-neon-green" (click)="toggleLanguage()">
+          <p-button class="p-0 scale-85 bg-transparent border-0 text-green-600 hover:text-neon-green font-medium" (click)="toggleLanguage()">
             {{ nextLang() }}
           </p-button>
         </li>
@@ -51,10 +51,10 @@
       [class.scale-y-100]="isMenuOpen()"
       style="transform-origin: top;">
       <ul class="list-none flex flex-col m-0 p-0">
-        <li class="border-b border-green-500"><a [routerLink]="['/']" fragment="profile" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.profile') }}</a></li>
-        <li class="border-b border-green-500"><a [routerLink]="['/']" fragment="skills" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.skills') }}</a></li>
-        <li class="border-b border-green-500"><a [routerLink]="['/']" fragment="projects" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.projects') }}</a></li>
-        <li class="border-b border-green-500"><a [routerLink]="['/contact']" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.contact') }}</a></li>
+        <li class="text-green-600 border-b border-green-500"><a [routerLink]="['/']" fragment="profile" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.profile') }}</a></li>
+        <li class="text-green-600 border-b border-green-500"><a [routerLink]="['/']" fragment="skills" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.skills') }}</a></li>
+        <li class="text-green-600 border-b border-green-500"><a [routerLink]="['/']" fragment="projects" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.projects') }}</a></li>
+        <li class="text-green-600 border-b border-green-500"><a [routerLink]="['/contact']" class="block px-4 py-3 text-green-600 no-underline hover:bg-gray-100 transition-colors">{{ t('navbar.contact') }}</a></li>
       </ul>
     </div>
   </div>

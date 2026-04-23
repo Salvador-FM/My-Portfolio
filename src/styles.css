@@ -6,6 +6,7 @@
 @theme {
   --color-gray-base: #222222;
   --color-white-400: #e2e2e2;
+  --color-neon-green: #39ff14;
 }
 
 :root {
@@ -31,7 +32,7 @@ body {
   height: 100%;
   margin: 0;
   background-color: transparent;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
