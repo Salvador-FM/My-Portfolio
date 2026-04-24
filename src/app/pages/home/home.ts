@@ -22,26 +22,26 @@ export class Home implements AfterViewInit {
   };
 
   frontendSkills = [
-    { name: 'Angular', icon: '/Angular-icon.png' },
-    { name: 'React', icon: '/React-icon.png' },
-    { name: 'Vue', icon: '/Vue-icon.png' },
-    { name: 'Next.js', icon: '/Nextjs-icon.png' },
-    { name: 'Astro', icon: '/Astro-icon.png' },
+    { name: 'Angular', icon: '/angular-icon.png' },
+    { name: 'React', icon: '/react-icon.png' },
+    { name: 'Vue', icon: '/vue-icon.png' },
+    { name: 'Next.js', icon: '/nextjs-icon.png' },
+    { name: 'Astro', icon: '/astro-icon.png' },
   ];
 
   backendSkills = [
-    { name: 'Node.js', icon: '/Nodejs-icon.png' },
-    { name: 'Express.js', icon: '/Expressjs-icon.png' },
-    { name: 'Spring Boot', icon: '/Spring-boot-icon.png' },
-    { name: 'Laravel', icon: '/Laravel-icon.png' },
+    { name: 'Node.js', icon: '/nodejs-icon.png' },
+    { name: 'Express.js', icon: '/expressjs-icon.png' },
+    { name: 'Spring Boot', icon: '/spring-boot-icon.png' },
+    { name: 'Laravel', icon: '/laravel-icon.png' },
   ];
 
   databaseSkills = [
-    { name: 'MySQL', icon: '/Mysql-icon.png' },
-    { name: 'PostgreSQL', icon: '/Postgresql-icon.png' },
-    { name: 'MongoDB', icon: '/Mongodb-icon.png' },
-    { name: 'SQLite', icon: '/Sqlite-icon.png' },
-    { name: 'Supabase', icon: '/Supabase-icon.png' },
+    { name: 'MySQL', icon: '/mysql-icon.png' },
+    { name: 'PostgreSQL', icon: '/postgresql-icon.png' },
+    { name: 'MongoDB', icon: '/mongodb-icon.png' },
+    { name: 'SQLite', icon: '/sqlite-icon.png' },
+    { name: 'Supabase', icon: '/supabase-icon.png' },
   ];
 
   constructor(private route: ActivatedRoute) {}
