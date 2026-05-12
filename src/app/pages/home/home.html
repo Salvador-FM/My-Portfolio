@@ -37,7 +37,7 @@
 
       <!-- Frontend -->
       <div class="mb-12">
-        <h5 class="text-xl font-semibold mb-6 text-center text-green-600 dark:text-neon-green">Frontend</h5>
+        <h5 class="text-xl font-semibold mb-6 text-center text-green-600 dark:text-neon-green">{{ t('home.sectionTechnologies.frontend') }}</h5>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           @for (skill of frontendSkills; track skill.name) {
             <div class="skill-card group relative flex flex-col items-center justify-center p-5 bg-gray-50 dark:bg-neutral-700 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
@@ -51,7 +51,7 @@
 
       <!-- Backend -->
       <div class="mb-12">
-        <h5 class="text-xl font-semibold mb-6 text-center text-green-600 dark:text-neon-green">Backend</h5>
+        <h5 class="text-xl font-semibold mb-6 text-center text-green-600 dark:text-neon-green">{{ t('home.sectionTechnologies.backend') }}</h5>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           @for (skill of backendSkills; track skill.name) {
             <div class="skill-card group relative flex flex-col items-center justify-center p-5 bg-gray-50 dark:bg-neutral-700 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
@@ -65,7 +65,7 @@
 
       <!-- Databases -->
       <div>
-        <h5 class="text-xl font-semibold mb-6 text-center text-green-600 dark:text-neon-green">Bases de datos</h5>
+        <h5 class="text-xl font-semibold mb-6 text-center text-green-600 dark:text-neon-green">{{ t('home.sectionTechnologies.databases') }}</h5>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           @for (skill of databaseSkills; track skill.name) {
             <div class="skill-card group relative flex flex-col items-center justify-center p-5 bg-gray-50 dark:bg-neutral-700 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
