@@ -22,11 +22,11 @@
       "description": "I have worked on various projects ranging from enterprise web applications to personal projects. Some of my notable projects include a task management platform, an online booking system, and a habit tracking application. Each project has allowed me to apply my technical skills and learn new technologies.",
       "project1": {
         "title": "Inventory Management System",
-        "description": "New version with Angular 18, signals, updated PrimeNG, NestJS backend, and AI support for stock predictions. Currently in active development."
+        "description": "Frontend built with Next.js and Tailwind CSS; backend using Prisma and MySQL. Implements REST APIs and a responsive UI for inventory management."
       },
       "project2": {
         "title": "Analytics Dashboard with AI",
-        "description": "Real-time data visualization + integration with machine learning models for forecasting."
+        "description": "Analytics dashboard built with Angular and Tailwind CSS on the frontend; backend powered by Spring Boot and PostgreSQL. Includes interactive visualizations and API integrations."
       },
       "project3": {
         "title": "Habit Tracking Application",
